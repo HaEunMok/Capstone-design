@@ -1,4 +1,4 @@
-# Capstone-design
+# Capstone-design 1
 ## 1. 레파지토리(repository) 소개
   본 레파지토리(repository)는 2020-1학기 캡스톤 디자인1의 활동을 담았다.
   repository의 내용은 텍스트마이닝을 위하여 공부한 TextMining with R 코드(text ming with R 01~06.R)와 프로젝트에 사용한 구현코드로 이루어져 있다. 
