@@ -51,10 +51,10 @@ dates = []
 content_tags = []
 board_url ="카페 검색창 주소(.page=)"
 driver.get(board_url)
-time.sleep(1) # <----------------- 여기 시간 수정함
+time.sleep(1) 
 driver.switch_to.frame("cafe_main")
 
-for i in range(1, pages + 1):  # 아래 첫번째 들여쓰기
+for i in range(1, pages + 1):
     count = i
     # urls=[]
     url = board_url + str(i)
@@ -130,14 +130,9 @@ for i in range(1, pages + 1):  # 아래 첫번째 들여쓰기
                 driver.switch_to_alert.accpet()
         except:
             pass
-    # 두번째 들여쓰기 끝
-
-    # 첫번째 들여쓰기 구간
-    # time.sleep 작업도 필요하다.
+  
     time.sleep(1)
 
-
-    #####################################
     print("title lengh=", len(stitle))
 
     ### DataFrame 으로 변환하기위한 리스트저장 ###
