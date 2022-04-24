@@ -4,43 +4,15 @@ from collections import Counter
 from konlpy import jvm
 from konlpy.tag import Okt
 from konlpy.tag import Twitter
-
-
-
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
 
-
-'''
-import time
-from konlpy.tag import Kkma, Okt, Komoran, Hannanum
-pos_tag = [('KHMA', Kkma()),('OKT', Okt()),("KOMORAN",Komoran()), ("HANNANUM", Hannanum())]
-
-
-
-for name, pack in pos_tag:
-    pos_token = []
-    tot_time = time.time()
-    for title in df["TITLE"]:
-        pos_token.append(pack.pos(title))
-    tot.time = time.time() - tot.time()
-    print("PACK : %10s - %.4f seconds" %(name, tot_time))
-
-
-f = open("preg_quest.csv", "r")
-rdr = csv.reader(f)
-for line in rdr:
-    print(line)
-f.close
-'''
-
 #jvm.init_jvm()
 okt = Okt()
-df = pd.read_csv("specup-18-취업.csv", names = ['title', 'content'],encoding='cp949')
+df = pd.read_csv("18년도 취업.csv", names = ['title', 'content'],encoding='cp949')
 
 text = df['title']
-
 
 top20_nouns=[]
 temp_total = (i for i in text)
@@ -78,6 +50,7 @@ nouns_df.loc[:, 'COUNT'] = noun_count
 
 # csv 파일로 별도 저장
 nouns_df.to_csv('NOUNS.csv')
+
 '''
 TDM = dummy.T
 word_counter = TDM.sum(axis =1)
